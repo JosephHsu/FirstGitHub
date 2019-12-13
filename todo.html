@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>todoList</title>
+    <meta charset="utf-8">
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="newTodo">
+    <button @click="addToDo">Add</button>
+    <ul>
+      <li v-for="(todo, index) in todos">{{todo}}
+        <button @click="removeToDo(index)">Remove</button>
+      </li>
+    </ul>
+    </div>
+    <script>
+        const vm = new Vue({
+          el: '#app',
+          data: {
+            newTodo: '',
+            todos: []
+          },
+          methods: {
+            addToDo() {
+              this.todos.push(this.newTodo);
+              this.newTodo = '';
+            },
+            removeToDo(index) {
+              this.todos.splice(index, 1)
+            }
+          }
+        })
+      </script>
+</body>
+
+</html>

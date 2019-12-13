@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	var test = {
+		globalMessage : "",
+		a : function(){
+			var message = "a";
+			test.globalMessage+=message;
+			test.b();
+			return test.globalMessage;
+		},
+		b : function(message){
+			test.globalMessage+="b";
+		}
+	};
+	console.log(test.a());
+	console.log(test.b());
+	</script>
+</head>
+<body>
+
+</body>
+</html>
