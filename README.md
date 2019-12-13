@@ -1,4 +1,12 @@
 # FirstGitHub
 Joseph's first github
 
-Try to edit it !
+My VSCode extensions :
+  Auto Rename Tag
+  Css Peek
+  ESLint
+  Image preview
+  Material Icon Theme
+  Material Theme
+  Vetur
+  Python
